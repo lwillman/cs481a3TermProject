@@ -1,6 +1,7 @@
 import Web3 from "web3";
 import store from "../redux/store";
 
+//Used from CryptoZombie Dapp
 //import web3Initialized from "../redux/modules/czAppDuck";  // for some unknown reason, the duck doesn't work!
 // so use this action type and creator instead
 

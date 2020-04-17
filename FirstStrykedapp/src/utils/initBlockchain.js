@@ -1,6 +1,7 @@
 import FirstStrike from "../contract_ABI/Patient.json";
 import store from "../redux/store";
 
+//Code pulled from CryptoZombies and modified
 //import blockchainInitialized from "../redux/modules/czAppDuck";  // for some unknown reason, the duck doesn't work!
 // so use this action type and creator instead
 
@@ -20,8 +21,8 @@ function blockchainInitialized(data) {
 
 async function initBlockchain(web3) {
     // Use web3 to get the user's accounts.
-    const accounts = await web3.eth.getAccounts();
-    const userAddress = accounts[0];
+    //const accounts = await web3.eth.getAccounts();
+    //const userAddress = accounts[0];
 
     // Get contract instance
     const networkId = await web3.eth.net.getId();
@@ -35,7 +36,7 @@ async function initBlockchain(web3) {
 
     let data = {
         CZ: instance,
-        userAddress,    // shorthand
+        //userAddress,    // shorthand
     };
 
     store.dispatch(blockchainInitialized(data));

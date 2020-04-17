@@ -1,7 +1,6 @@
 pragma solidity >=0.5.0 <0.6.0;
 
 import "./safemath.sol";
-import "./UserEntity.sol";
 
 contract Patient {
     using SafeMath for uint256;
@@ -63,5 +62,9 @@ contract Patient {
         return patientsByLocation[location].length;
     }
     
-}
+    function totalPatientsPerVirus(string memory virus) public view returns(uint) {
+        return patientsByVirus[virus].length;
+    }
     
+}
+ 

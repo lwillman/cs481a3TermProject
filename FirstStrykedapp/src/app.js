@@ -5,3 +5,4 @@ import initBlockchain from "./utils/initBlockchain";
 class App extends Component {
 
 }
+export default App;

@@ -2,7 +2,7 @@ pragma solidity >=0.5.0 <0.6.0;
 
 import "./safemath.sol";
 
-contract Patient {
+contract PatienDatat {
     using SafeMath for uint256;
     using SafeMath for uint32;
     using SafeMath for uint16;
@@ -50,7 +50,8 @@ contract Patient {
     }
 
    function _createPatient(string memory _virus, string memory _location, string memory _longitude, string memory _latitude, uint _ageGroup, bool _gender) public isAuthorized {
-        uint patientId = patients.push(Patient(_virus, _location, _longitude, _latitude, _ageGroup, _gender));
+        //uint patientId =
+        patients.push(Patient(_virus, _location, _longitude, _latitude, _ageGroup, _gender));
 
         virusPatientCount[_virus] = virusPatientCount[_virus].add(1);
         patientsByLocation[_location].push(Patient(_virus, _location, _longitude, _latitude, _ageGroup, _gender));

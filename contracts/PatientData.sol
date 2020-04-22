@@ -2,7 +2,7 @@ pragma solidity >=0.5.0 <0.6.0;
 
 import "./safemath.sol";
 
-contract PatienData {
+contract PatientData {
     using SafeMath for uint256;
     using SafeMath for uint32;
     using SafeMath for uint16;

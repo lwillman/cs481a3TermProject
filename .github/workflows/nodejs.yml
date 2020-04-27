@@ -2,6 +2,7 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
 name: Node.js CI
+directoryCmd: --prefix FirstStrykedapp
 
 on:
   push:
@@ -24,9 +25,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: cd FirstStrykedapp
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+
+    - run: npm ci $(directoryCmd)
+    - run: npm run build --if-present $(directoryCmd)
+    - run: npm test $(directoryCmd)
       env:
         CI: true

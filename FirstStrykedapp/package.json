@@ -1,0 +1,52 @@
+{
+  "name": "firststrykedapp",
+  "version": "1.0.0",
+  "description": "Web3 dApp for tracking cases of contagions",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "test": "react-scripts test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lwillman/cs481a3TermProject.git"
+  },
+  "author": "Alex, Saja, Lacey, Andrew",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lwillman/cs481a3TermProject/issues"
+  },
+  "homepage": "https://github.com/lwillman/cs481a3TermProject#readme",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.1",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "semantic-ui-css": "^2.4.1",
+    "web3": "^1.2.7"
+  },
+  "devDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.1",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "semantic-ui-css": "^2.4.1",
+    "web3": "^1.2.7"
+  }
+}

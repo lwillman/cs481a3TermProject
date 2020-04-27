@@ -25,8 +25,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - run: npm ci --prefix FirstStrkedapp
-    - run: npm run build --if-present --prefix FirstStrkedapp
-    - run: npm test --prefix FirstStrkedapp
+    - run: npm ci --prefix FirstStrykedapp
+    - run: npm run build --if-present --prefix FirstStrykedapp
+    - run: npm test --prefix FirstStrykedapp
       env:
         CI: true

@@ -1,0 +1,106 @@
+Index: FirstStrykedapp/src/components/DataEntry.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- FirstStrykedapp/src/components/DataEntry.js	(date 1587919722401)
++++ FirstStrykedapp/src/components/DataEntry.js	(date 1587919722401)
+@@ -0,0 +1,17 @@
++import React from "react";
++import FileUpload from "./FileUpload";
++
++let DataEntry = React.createClass({
++    render: function () {
++        return (
++            <div>
++                <h2>Data Entry Here</h2>
++                <p>Please input data one at a time or upload a file!</p>
++                <li>Single Patient</li>
++                <li><Link to={FileUpload}>Upload File</Link></li>
++            </div>
++        );
++    }
++});
++
++export default DataEntry;
+\ No newline at end of file
+Index: FirstStrykedapp/src/components/MenuBar.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- FirstStrykedapp/src/components/MenuBar.js	(date 1587705382071)
++++ FirstStrykedapp/src/components/MenuBar.js	(date 1587705382071)
+@@ -0,0 +1,28 @@
++import React, { Component } from "react";
++import { Link } from "react-router-dom";
++import { connect } from "react-redux";
++import { Button } from "semantic-ui-react";
++import CreateZombie from "./CreateZombie";
++import { Menu, Header } from "semantic-ui-react";
++
++function stateToProps(state) {
++    return {
++      //map appropriate state to prop
++    };
++}
++
++class MenuBar extends Component {
++    render() {
++        return (
++            <div>
++                <Menu style={{marginTop: "9px"}}>
++                    <Menu.Item>
++                        //Data entry button goes here
++                    </Menu.Item>
++                </Menu>
++                //Other options here
++            </div>
++        );
++    }
++}
++export default connect(stateToProps)(MenuBar);
+\ No newline at end of file
+Index: FirstStrykedapp/src/components/Trial.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- FirstStrykedapp/src/components/Trial.js	(date 1588026380706)
++++ FirstStrykedapp/src/components/Trial.js	(date 1588026380706)
+@@ -0,0 +1,34 @@
++import React, { Component } from "react";
++//import firststryke getPatients
++import { connect } from "react-redux";
++import { Button, Header, Icon, Modal, Form, Message } from "semantic-ui-react";
++
++
++function stateToProps(state) {
++    return {
++        //add props and state
++    };
++}
++
++class DataEntry extends Component {
++    state = {
++        modalOpen: false,
++        virus: '',
++        location: '',
++        latitude: '',
++        longitude: '',
++        ageGroup: '',
++        gender: ''
++    };
++
++    handleOpen = () => this.setState( state: { modalOpen: true});
++    handleClose = () => this.setState(state: {modalOpen: false});
++
++    onSubmit = async event => {
++        event.preventDefault();
++        this.setState(state: {
++            //
++        })
++    }
++
++}
+\ No newline at end of file

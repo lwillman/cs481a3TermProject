@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="10" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b8a49e0e-63c8-4141-a6f8-ebe39d80481b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/FirstStrykedapp/src/components/DataEntry.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstStrykedapp/src/components/MenuBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstStrykedapp/src/components/Trial.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="secondTry" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1aVpwV4w7AAjZhB03sB84KbyF9a" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/simpledapp/src" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/FirstStrykedapp/src/components" />
+      <recent name="$PROJECT_DIR$/FirstStrykedapp/src" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/simpledapp/src" />
+      <recent name="$PROJECT_DIR$/../Backup" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8a49e0e-63c8-4141-a6f8-ebe39d80481b" name="Default Changelist" comment="" />
+      <created>1586830853314</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586830853314</updated>
+      <workItem from="1586830854527" duration="27390000" />
+      <workItem from="1588025458034" duration="1249000" />
+    </task>
+    <task id="LOCAL-00001">
+      <created>1587072759826</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587072759826</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Adding JS utility files and starting app.js">
+      <created>1587072951620</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587072951620</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Adding contract_ABI and initBlockchain.js">
+      <created>1587090535885</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587090535885</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Adding redux files to app&#10;May need to alter in future">
+      <created>1587490562384</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1587490562384</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Changed to address warning messages">
+      <created>1587590501732</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1587590501732</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adding component files">
+      <created>1587937431470</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1587937431470</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adding JS utility files and starting app.js" />
+    <MESSAGE value="Adding contract_ABI and initBlockchain.js" />
+    <MESSAGE value="Adding redux files to app&#10;May need to alter in future" />
+    <MESSAGE value="Changed to address warning messages" />
+    <MESSAGE value="Adding component files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding component files" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="307" y="355" width="673" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587071721088">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="307" y="355" width="673" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1587071721088" />
+    <state x="585" y="405" width="518" height="294" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1587074540338">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="585" y="405" width="518" height="294" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/67.27.1853.1053@67.27.1853.1053" timestamp="1587074540338" />
+    <state x="619" y="111" width="968" height="904" key="CommitChangelistDialog2" timestamp="1587937431349">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="619" y="111" width="968" height="904" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1587937431349" />
+    <state x="98" y="116" width="1482" height="872" key="DiffContextDialog" timestamp="1587090627262">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="98" y="116" width="1482" height="872" key="DiffContextDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1587090627262" />
+    <state x="432" y="296" width="424" height="513" key="FileChooserDialogImpl" timestamp="1587071609247">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="432" y="296" width="424" height="513" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1587071609247" />
+    <state x="730" y="420" width="555" height="264" key="MultipleFileMergeDialog" timestamp="1587091110908">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="730" y="420" width="555" height="264" key="MultipleFileMergeDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1587091110908" />
+    <state x="444" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1588025856460">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="444" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1588025856460" />
+    <state x="425" y="467" width="458" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588027185574">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="425" y="467" width="458" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1588027185574" />
+    <state x="194" y="253" key="run.anything.popup" timestamp="1586833944688">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="194" y="253" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1586833944688" />
+  </component>
+</project>

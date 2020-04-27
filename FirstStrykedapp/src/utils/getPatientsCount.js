@@ -14,11 +14,12 @@ function patientCount(data) {
 //  set up the blockchain shadow contract, user address, and user zombie count.  Put into redux store.
 //
 
-async function getPatientCount(CZ, userAddress) {
+async function getPatientCount(CZ, virus) {
   // get number of Patient owned by the user account
 
   let userPatientCount = +(await CZ.methods // + convert a string to an integer
-    .totalPatientsPerVirus(userAddress)
+    .totalPatientsPerVirus(virus)
+    //virus name
     .call());
 
   // do a binary search to estimate total zombie count.

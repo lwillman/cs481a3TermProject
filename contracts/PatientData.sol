@@ -17,8 +17,9 @@ contract PatientData {
         AgeGroup { 1 = 0-10,
                    2 = 11-20,
                    3 = 21-30,
-                   4 = 40-60,
-                   5 = 60+
+                   4 = 31-45,
+                   5 = 46-60,
+                   6 = 60+
                    }
          gender true = male, false = female
     */

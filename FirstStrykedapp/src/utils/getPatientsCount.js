@@ -19,6 +19,7 @@ async function getPatientCount(CZ, virus) {
 
   let userPatientCount = +(await CZ.methods // + convert a string to an integer
     .totalPatientsPerVirus(virus)
+    //virus name
     .call());
 
   // do a binary search to estimate total zombie count.

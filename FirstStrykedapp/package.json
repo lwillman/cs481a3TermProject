@@ -4,6 +4,7 @@
   "description": "Web3 dApp for tracking cases of contagions",
   "main": "index.js",
   "scripts": {
+    "build": "react-scripts build",
     "start": "react-scripts start",
     "test": "react-scripts test"
   },
@@ -16,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/lwillman/cs481a3TermProject/issues"
   },
-  "homepage": "https://github.com/lwillman/cs481a3TermProject#readme",
+  "homepage": "./",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -37,7 +38,10 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "semantic-ui-css": "^2.4.1",
-    "web3": "^1.2.7"
+    "web3": "^1.2.7",
+    "leaflet": "^1.6.0",
+    "react-leaflet": "^1.6.0",
+    "react-leaflet-heatmap-layer": "^2.0.0"
   },
   "devDependencies": {
     "react": "^16.13.1",
@@ -47,6 +51,9 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "semantic-ui-css": "^2.4.1",
-    "web3": "^1.2.7"
+    "web3": "^1.2.7",
+    "leaflet": "^1.6.0",
+    "react-leaflet": "^1.6.0",
+    "react-leaflet-heatmap-layer": "^2.0.0"
   }
 }

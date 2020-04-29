@@ -41,31 +41,34 @@ contract Storage {
     address private authorizedInputContract;
     
     modifier isAuthorized(){
-        // This code is misleading. Need to figure out how to separate calling contract from calling user address
         require(msg.sender == authorizedInputContract, "You must be authorized to add to this record set.");
         _;
     }
     
     // Necessary for 1 indexed records array in order to properly update infection counts at preexisting Lat/Lon records
+    // This way if we lookup lat/lon in recordByLatLon mapping and it maps to index 0 (default value), we know: no record for the given lat/lon
     constructor () public {
         records.push(Record("none", "none", "none", 0));
     }
     
     // This needs to be onlyOwner but is not enforced in this version
     function changeInputContractAddress(address newInputContract) public {
+        // This code is misleading. Need to figure out how to separate calling contract from calling user address
         authorizedInputContract = newInputContract;
     }
     
     // This needs an authorization modifier
+    // The return value is the index of the record that was either added or updated
     function addRecord(string memory _virus, string memory _location, string memory _latlon) public returns (uint) {
         
         // Record exists for the given Lat/Lon
         if (recordByLatLon[_latlon] != 0){
+            // Increment existing record's count by 1
             records[recordByLatLon[_latlon]].count = records[recordByLatLon[_latlon]].count.add(1); // Update patient count on preexisting record
             return recordByLatLon[_latlon];
         }
         
-        // Create new record for given lat/lon
+        // Create new record and set count to 1
         uint newRecordIndex = records.push(Record(_virus, _location, _latlon, 1)) - 1;
         recordsByLocation[_location].push(newRecordIndex);
         recordsByVirus[_virus].push(newRecordIndex);
@@ -76,18 +79,20 @@ contract Storage {
     }
     
     // This needs an authorization modifier
+    // The return value is the index of the record that was either added or updated
     function addHistoricalRecord(string memory _virus, string memory _location, string memory _latlon, uint _recordCount) public returns (uint) {
         
         // Record exists for the given Lat/Lon
         if (recordByLatLon[_latlon] != 0){
+            // Increment existing record's count by _recordCount
             records[recordByLatLon[_latlon]].count = records[recordByLatLon[_latlon]].count.add(_recordCount);  // Update patient count on preexisting record
             return recordByLatLon[_latlon];
         }
         
-        // Create new record for given lat/lon
+        // Create new record and set count to _recordCount
         uint newRecordIndex = addRecord(_virus, _location, _latlon);
         records[newRecordIndex].count = _recordCount;
-        return _recordCount;
+        return newRecordIndex;
         
     }
     

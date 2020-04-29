@@ -35,37 +35,7 @@ componentDidMount = async () => {
 
 
 
-  render() {
-    return (
-      <Provider store={store}>
-        <HashRouter>
-          <Container>
-            <TopBar state={this.state} />
-            <div>
-              <Route exact path="/" component={Greeting} />
-              <Route
-                exact
-                path="/myZombieInventory"
-                component={MyZombieInventory}
-              />
-              <Route
-                exact
-                path="/ZombieInventory"
-                component={ZombieInventory}
-              />
-              {/* routes used in zombie action modal */}
-              <Route exact path="/AttackZombie" component={AttackZombie} />
-              <Route exact path="/FeedOnKitty" component={FeedOnKitty} />
-              <Route exact path="/ChangeName" component={ChangeName} />
-              <Route exact path="/LevelUp" component={LevelUp} />
-              <Route exact path="/TransferZombie" component={TransferZombie} />
-            </div>
-          </Container>
-        </HashRouter>
-      </Provider>
-    );
-  }
-}
+  
 
 export default App;
 

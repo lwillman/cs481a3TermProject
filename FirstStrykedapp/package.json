@@ -31,7 +31,7 @@
     ]
   },
   "dependencies": {
-    "google-maps-react": "^2.0.6",
+    "google-map-react": "^1.1.7",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
@@ -45,6 +45,7 @@
     "web3": "^1.2.7"
   },
   "devDependencies": {
+    "google-map-react": "^1.1.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",

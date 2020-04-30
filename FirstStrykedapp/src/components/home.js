@@ -1,12 +1,12 @@
-import React, {Component} from "react";
-import Map from './images/worldmap.jpg';
+import React from "react";
+import HeatMap from "./map";
 
-export default class Home extends React.Component {
+class Home extends React.Component {
     render() {
-        return (
-            <div>
-                <img src={Map} alt="Hi!" width="102%" height="102%"/>
-            </div>
+        return(
+            <HeatMap />
         );
     }
 }
+
+export default Home;

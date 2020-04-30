@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
-//import Dashboard from './pages/Dashboard';
 import Home from './home';
 import AboutUs from './DataEntry';
 

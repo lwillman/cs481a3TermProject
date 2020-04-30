@@ -31,8 +31,7 @@
     ]
   },
   "dependencies": {
-    "google-maps-react": "^2.0.6",
-    "leaflet": "^1.6.0",
+    "google-map-react": "^1.1.7",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
@@ -48,13 +47,9 @@
     "web3": "^1.2.7"
   },
   "devDependencies": {
-    "leaflet": "^1.6.0",
+    "google-map-react": "^1.1.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-leaflet": "^1.6.0",
-    "react-leaflet-heatmap-layer": "^2.0.0",
-    "react-redux": "^7.2.0",
-    "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.1",
     "reactstrap": "^8.4.1",
     "redux": "^4.0.5",

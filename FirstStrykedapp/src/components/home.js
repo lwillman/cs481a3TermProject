@@ -1,13 +1,12 @@
-import React from "react";
+import React, {Component} from "react";
+import Map from './images/worldmap.jpg';
 
-let Home = React.createClass({
-    render: function() {
+export default class Home extends React.Component {
+    render() {
         return (
             <div>
-            <img src="images/worldmap.jpg" alt="Hi!" width="102%" height="102%"/>
+                <img src={Map} alt="Hi!" width="102%" height="102%"/>
             </div>
-    );
+        );
     }
-});
-
-export default Home;
+}

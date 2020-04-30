@@ -52,18 +52,21 @@ button {
 }
 
 /* Class */
-.navBar {
+.nav {
     width: 100%;
     background-color: #111;
     color: white;
-    padding: 10px;
+    padding: 20px;
 }
 
-.links {
+.nav-link {
     height: 0;
     overflow: hidden;
     list-style-type: none;
     font-weight: bold;
+    color: white;
+    padding: 20px;
+
 }
 
 .show-nav {
@@ -106,7 +109,7 @@ ul.header {
     background-color: #111;
     padding: 0;
 }
-ul.header li a {
+ul.header li nav-link {
     color: #FFF;
     font-weight: bold;
     text-decoration: none;
@@ -125,7 +128,7 @@ ul.header li a {
     margin-bottom: 10px;
 }
 .active {
-    background-color: cadetblue;
+    background-color: slategray;
 }
 .TextInput .header input {
     padding: 10px;

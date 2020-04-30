@@ -17,12 +17,9 @@ class NavigationBar extends React.Component {
                                 </button>
                                 <div className="collapse navbar-collapse" id="collapsibleNavbar">
                                     <ul className="nav navbar-nav">
-                                        <li className="nav-item">
-                                            <NavLink className="nav-link" exact to="/" >Home</NavLink>
-                                        </li>
-                                        <li>
-                                            <NavLink className="nav-link" exact to="/data_entry" >Data Entry</NavLink>
-                                        </li>
+                                        <NavLink className="nav-link" exact to="/" >Home</NavLink>
+                                        <NavLink className="nav-link" exact to="/data_entry" >Data Entry</NavLink>
+
                                     </ul>
                                 </div>
                             </div>

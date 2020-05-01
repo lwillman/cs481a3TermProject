@@ -1,7 +1,6 @@
-
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import App from "./app";
 
 import "semantic-ui-css/semantic.min.css";
 
@@ -11,6 +10,3 @@ ReactDOM.render(
     <App />,
   document.querySelector("#root")
 );
-
-
-// >>>>>>> b720a7de3d9776e7fa0ada486b78dbb4d3708794

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+// <<<<<<< HEAD
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
@@ -11,13 +11,6 @@ ReactDOM.render(
     <App />,
   document.querySelector("#root")
 );
-=======
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './app';
 
-ReactDOM.render(
-    <App />,
-    document.querySelector("#root")
-);
->>>>>>> b720a7de3d9776e7fa0ada486b78dbb4d3708794
+
+// >>>>>>> b720a7de3d9776e7fa0ada486b78dbb4d3708794

@@ -21,7 +21,8 @@ class App extends Component {
     try {
       const web3 = await getWeb3(); // from utils directory;  connect to metamask
       const data = await initBlockchain(web3);  // get contract instance and user address
-      await getpatientsCount(data.CZ, data.virus);  // get user count and total count of zombies
+      await getpatientsCount(data.CZ, data.virus);  // get user count and total count of getpatients
+
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -46,11 +47,8 @@ class App extends Component {
               //back to this agian
 
               <Route exact path="/DataEntry" component={DataEntry} />
-              <Route exact path="/FileUpload" component={FileUpload} />
               <Route exact path="/home" component={home} />
-              // <Route exact path="/radio" component={radio} />
-              // <Route exact path="/select" component={textinput} />
-              // <Route exact path="/validation" component={validation} />
+
             </div>
           </Container>
         </HashRouter>

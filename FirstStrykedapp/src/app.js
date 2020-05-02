@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import getWeb3 from "./utils/getWeb3";
 import initBlockchain from "./utils/initBlockchain";
-//import getPatientCount from "./utils/getPatientsCount";
+import getPatientCount from "./utils/getPatientsCount";
 
 
 import { HashRouter, Route } from "react-router-dom";
@@ -17,12 +17,12 @@ import store from "./redux/store";
 class App extends Component {
 
 
-/*
+
   componentDidMount = async () => {
     try {
       const web3 = await getWeb3();
       const data = await initBlockchain(web3);
-      await getPatientCount(data.CZ, data.virus);
+      await getPatientCount(data.FS, data.virus);
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -32,7 +32,7 @@ class App extends Component {
       console.log(error);
     }
   };
-*/
+
   render() {
     return (
       <Provider store={store}>

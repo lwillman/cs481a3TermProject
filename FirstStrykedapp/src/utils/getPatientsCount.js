@@ -14,10 +14,10 @@ function patientCount(data) {
 //  set up the blockchain shadow contract, user address, and user zombie count.  Put into redux store.
 //
 
-async function getPatientCount(CZ, virus) {
+async function getPatientCount(FS, virus) {
   // get number of Patient owned by the user account
 
-  let userPatientCount = +(await CZ.methods // + convert a string to an integer
+  let userPatientCount = +(await FS.methods // + convert a string to an integer
     .totalPatientsPerVirus(virus)
     //virus name
     .call());
@@ -32,7 +32,7 @@ async function getPatientCount(CZ, virus) {
 
   while (low < high) {
     try {
-      await CZ.methods.Patient(middle).call();
+      await FS.methods.Patient(middle).call();
       low = middle + 1;
       middle = Math.floor(low + (high - low) / 2);
     } catch {
@@ -45,7 +45,7 @@ async function getPatientCount(CZ, virus) {
 
   let data = {
     totalPatientCount: low-1,     // from binary search
-    userPatientCount  >>>        //EC7 shorthand for totalPatientCount:totalPatientCount because of same variable name
+    userPatientCount      //EC7 shorthand for totalPatientCount:totalPatientCount because of same variable name
   };
 
   store.dispatch(patientCount(data));

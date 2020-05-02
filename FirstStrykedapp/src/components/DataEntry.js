@@ -4,8 +4,6 @@ import './app.css';
 
 import TextInput from './textinput';
 import validate from './validation';
-import Select from './select';
-import Radio from './radio';
 
 class DataEntry extends Component {
     constructor(props) {
@@ -31,53 +29,23 @@ class DataEntry extends Component {
                     },
                     touched: false
                 },
-                longitude: {
+                latLong: {
                     value: '',
-                    placeholder: 'Longitude',
+                    placeholder: 'Latitude, Longitude',
                     valid: false,
                     validationRules: {
                         isRequired: true
                     },
                     touched: false
                 },
-                latitude: {
+                count: {
                     value: '',
-                    placeholder: 'Latitude',
+                    placeholder: 'Patient Count',
                     valid: false,
                     validationRules: {
                         isRequired: true
                     },
                     touched: false
-                },
-                ageGroup: {
-                    value: '',
-                    placeholder: 'Select age group',
-                    valid: false,
-                    touched: false,
-                    validationRules: {
-                        isRequired: true,
-                    },
-                    options: [
-                        {value: 1, displayValue: '0 - 10'},
-                        {value: 2, displayValue: '11 - 20'},
-                        {value: 3, displayValue: '21 - 30'},
-                        {value: 4, displayValue: '31 - 45'},
-                        {value: 5, displayValue: '46 - 60'},
-                        {value: 6, displayValue: '61 +'}
-                    ]
-                },
-                gender: {
-                    value: '',
-                    placeholder: 'What is your gender',
-                    valid: false,
-                    touched: false,
-                    validationRules: {
-                        isRequired: true,
-                    },
-                    options: [
-                        {value: 'male', displayValue: 'Male'},
-                        {value: 'female', displayValue: 'Female'}
-                    ]
                 }
 
             }
@@ -148,43 +116,24 @@ class DataEntry extends Component {
                               valid={this.state.formControls.location.valid}
                     />
 
-                    <TextInput name="longitude"
-                              placeholder={this.state.formControls.longitude.placeholder}
-                              value={this.state.formControls.longitude.value}
+                    <TextInput name="latLong"
+                              placeholder={this.state.formControls.latLong.placeholder}
+                              value={this.state.formControls.latLong.value}
                               onChange={this.changeHandler}
-                              touched={this.state.formControls.longitude.touched}
-                              valid={this.state.formControls.longitude.valid}
+                              touched={this.state.formControls.latLong.touched}
+                              valid={this.state.formControls.latLong.valid}
                     />
 
-                    <TextInput name="latitude"
-                              placeholder={this.state.formControls.latitude.placeholder}
-                              value={this.state.formControls.latitude.value}
+                    <TextInput name="count"
+                              placeholder={this.state.formControls.count.placeholder}
+                              value={this.state.formControls.count.value}
                               onChange={this.changeHandler}
-                              touched={this.state.formControls.latitude.touched}
-                              valid={this.state.formControls.latitude.valid}
+                              touched={this.state.formControls.count.touched}
+                              valid={this.state.formControls.count.valid}
                     />
 
-                    <Radio name="my_radio"
-                           value={this.state.formControls.ageGroup.value}
-                           onChange={this.changeHandler}
-                           options={this.state.formControls.ageGroup.options}
-                           touched={this.state.formControls.ageGroup.touched}
-                           valid={this.state.formControls.ageGroup.valid}
-                    />
+                    <input type="submit" value="Submit" />
 
-                    <Select name="gender"
-                            value={this.state.formControls.gender.value}
-                            onChange={this.changeHandler}
-                            options={this.state.formControls.gender.options}
-                            touched={this.state.formControls.gender.touched}
-                            valid={this.state.formControls.gender.valid}
-                    />
-
-                    <button onClick={this.formSubmitHandler}
-                            disabled={! this.state.formIsValid}
-                    >
-                        Submit
-                    </button>
                 </Card>
             </div>
         );

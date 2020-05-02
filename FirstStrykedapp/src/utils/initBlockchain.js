@@ -30,7 +30,7 @@ async function initBlockchain(web3) {
     // put state data into the REDUX store for easy access from other pages and components
 
     let data = {
-        CZ: instance,
+        FS: instance,
         userAddress    // shorthand
     };
 

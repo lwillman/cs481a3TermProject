@@ -14,6 +14,7 @@
 // They are defined as all upper-case constants and may be exported if needed elsewhere.
 
 const WEB3_INITIALIZED = "WEB3_INITIALIZED";
+const BLOCKCHAIN_INITIALIZED = "BLOCKCHAIN_INITIALIZED";
 const VIRUS_INFO = "VIRUS_INFO";
 
 //  Actions and Action Creator Functions
@@ -72,6 +73,13 @@ export default function reducer(state = initialState, action) {
             console.log("Web3 is initializing", action.payload.results);
             return Object.assign({}, state, {
                 web3Instance: action.payload.web3Instance
+            });
+
+        case BLOCKCHAIN_INITIALIZED:
+            return Object.assign({}, state, {
+                FS: action.payload.FS,
+                userAddress: action.payload.userAddress,
+                patients: action.payload.patients
             });
 
             //May want to change data we grab from contract

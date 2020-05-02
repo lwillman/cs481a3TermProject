@@ -132,7 +132,8 @@ class DataEntry extends Component {
                               valid={this.state.formControls.count.valid}
                     />
 
-                    <input type="submit" value="Submit" />
+                    <input type="submit" value="Submit" onClick={this.formSubmitHandler}
+                           disabled={! this.state.formIsValid} />
 
                 </Card>
             </div>

@@ -1,9 +1,7 @@
-import FirstStrike from "../contract_ABI/Patient.json";
+import PatientDataContract from "../contract_ABI/PatientData.json";
 import store from "../redux/store";
 
 //Code pulled from CryptoZombies and modified
-//import blockchainInitialized from "../redux/modules/czAppDuck";  // for some unknown reason, the duck doesn't work!
-// so use this action type and creator instead
 
 export const BLOCKCHAIN_INITIALIZED = "BLOCKCHAIN_INITIALIZED"; // action type
 
@@ -21,26 +19,22 @@ function blockchainInitialized(data) {
 
 async function initBlockchain(web3) {
     // Use web3 to get the user's accounts.
-    //const accounts = await web3.eth.getAccounts();
-    //const userAddress = accounts[0];
+    const accounts = await web3.eth.getAccounts();
+    const userAddress = accounts[0];
 
     // Get contract instance
-    const networkId = await web3.eth.net.getId();
-    const deployedNetwork = FirstStrike.networks[networkId];
     const instance = new web3.eth.Contract(
-        FirstStrike.abi,
-        deployedNetwork && deployedNetwork.address
+        PatientDataContract.abi, "0xd180300Cd7d80d724F343671f6B92092CdF20777"
     );
 
     // put state data into the REDUX store for easy access from other pages and components
 
     let data = {
         CZ: instance,
-        //userAddress,    // shorthand
+        userAddress    // shorthand
     };
 
     store.dispatch(blockchainInitialized(data));
-
     return data;
 }
 

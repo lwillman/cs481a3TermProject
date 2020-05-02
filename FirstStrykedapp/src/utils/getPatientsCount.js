@@ -45,7 +45,7 @@ async function getPatientCount(CZ, virus) {
 
   let data = {
     totalPatientCount: low-1,     // from binary search
-    userPatientCount  >>>        //EC7 shorthand for totalPatientCount:totalPatientCount because of same variable name
+    userPatientCount      //EC7 shorthand for totalPatientCount:totalPatientCount because of same variable name
   };
 
   store.dispatch(patientCount(data));

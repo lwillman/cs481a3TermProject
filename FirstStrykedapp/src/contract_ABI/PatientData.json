@@ -1,0 +1,142 @@
+{
+  "contractName": "PatientData",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "virus",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "location",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "latLon",
+          "type": "string"
+        }
+      ],
+      "name": "NewPatient",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "_addUser",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_virus",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_location",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_latLon",
+          "type": "string"
+        }
+      ],
+      "name": "_createPatient",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newStorageContractAddress",
+          "type": "address"
+        }
+      ],
+      "name": "_setStorageContract",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "authorizedEntity",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "location",
+          "type": "string"
+        }
+      ],
+      "name": "patientsPerLocation",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "virus",
+          "type": "string"
+        }
+      ],
+      "name": "totalPatientsPerVirus",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 body {
-    background-color: #7F58FF;
+    background-color: #7f58ff;
     padding: 20px;
     margin: 0;
 }
@@ -14,12 +14,6 @@ body {
 .App-logo {
     height: 40vmin;
     pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
 }
 
 .App-header {
@@ -130,6 +124,11 @@ ul.header li nav-link {
 .active {
     background-color: slategray;
 }
+
+input[type="text"]{
+    background-color: lightgray;
+}
+
 .TextInput .header input {
     padding: 10px;
     font-size: 16px;
@@ -144,7 +143,7 @@ ul.header li nav-link {
     border: 2px solid #0066ff;
 }
 .TextInput .header button:hover {
-    background-color: #003399;
-    border: #003399;
+    background-color: darkorchid;
+    border: darkorchid;
     cursor: pointer;
 }

@@ -23,10 +23,12 @@ async function initBlockchain(web3) {
     const userAddress = accounts[0];
 
     // Get contract instance
+    const networkId = await web3.eth.net.getId();
+    const deployedNetwork = PatientDataContract.networks[networkId];
     const instance = new web3.eth.Contract(
-        PatientDataContract.abi, "0x80688B8031d3eF7734408017107c1159784B258f"
+        PatientDataContract.abi,
+        deployedNetwork && deployedNetwork.address
     );
-
     // put state data into the REDUX store for easy access from other pages and components
 
     let data = {

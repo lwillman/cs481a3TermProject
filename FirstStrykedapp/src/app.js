@@ -22,7 +22,7 @@ class App extends Component {
     try {
       const web3 = await getWeb3();
       const data = await initBlockchain(web3);
-      await getPatientCount(data.FS, data.virus);
+      await getPatientCount(data.FS, "COVID-19");
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(

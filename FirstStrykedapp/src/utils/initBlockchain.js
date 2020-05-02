@@ -24,7 +24,7 @@ async function initBlockchain(web3) {
 
     // Get contract instance
     const instance = new web3.eth.Contract(
-        PatientDataContract.abi, "0xd180300Cd7d80d724F343671f6B92092CdF20777"
+        PatientDataContract.abi, "0x80688B8031d3eF7734408017107c1159784B258f"
     );
 
     // put state data into the REDUX store for easy access from other pages and components

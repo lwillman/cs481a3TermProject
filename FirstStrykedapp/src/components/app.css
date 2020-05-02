@@ -1,12 +1,23 @@
-body {
-    background-color: #7f58ff;
+.DataEntry {
+    background-color: slategray;
+    height: 200px;
+    align-content: center;
+}
+
+.Card {
+    background-color: slategray;
+    width: 35%;
     padding: 20px;
-    margin: 0;
+    float: none;
+    margin: 0 auto 10px;
 }
 body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
+.container-fluid {
+    width: 97.5%;
+}
 .App {
     text-align: center;
 }
@@ -128,6 +139,8 @@ ul.header li nav-link {
 input[type="text"]{
     background-color: lightgray;
 }
+
+
 
 .TextInput .header input {
     padding: 10px;

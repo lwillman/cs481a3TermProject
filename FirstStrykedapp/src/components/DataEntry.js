@@ -99,14 +99,13 @@ class DataEntry extends Component {
 
         return (
             <div className="DataEntry">
-                <Card>
-                    <TextInput name="name"
+                <Card className="Card">
+                    < TextInput name="name"
                                placeholder={this.state.formControls.name.placeholder}
                                value={this.state.formControls.name.value}
                                onChange={this.changeHandler}
                                touched={this.state.formControls.name.touched}
-                               valid={this.state.formControls.name.valid}
-                    />
+                               valid={this.state.formControls.name.valid}/>
 
                     <TextInput name="location"
                               placeholder={this.state.formControls.location.placeholder}

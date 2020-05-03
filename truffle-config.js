@@ -23,7 +23,7 @@ const fs = require('fs');
 
 // You will need to create secretes.json in the root directory of the project
 // It should have two fields: infuraProjectID and mnemonic
-// Create an account on infura.io. It's free, quick easy. Copy the ProjectID (NOT the "Project Secret")
+// Create an account on infura.io. It's free, quick easy. Copy the Project ID (NOT the "Project Secret")
 // Mnemonic is the 12 word mnemonic seed phrase from your wallet
 let secrets;
 if (fs.existsSync('secrets.json')){

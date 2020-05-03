@@ -63,7 +63,7 @@ contract Storage {
     function addRecord(string memory _virus, string memory _location, string memory _latlon) public returns (uint) {
 
         // Record exists for the given Lat/Lon
-        if (recordByLatLon[_latlon] != 0){
+        if (recordByLatLon[_latlon] != 0 && keccak256(abi.encodePacked(records[recordByLatLon[_latlon]].virus)) == keccak256(abi.encodePacked(_virus))){
             // Increment existing record's count by 1
             records[recordByLatLon[_latlon]].count = records[recordByLatLon[_latlon]].count.add(1); // Update patient count on preexisting record
             return recordByLatLon[_latlon];
@@ -83,8 +83,8 @@ contract Storage {
     // The return value is the index of the record that was either added or updated
     function addHistoricalRecord(string memory _virus, string memory _location, string memory _latlon, uint _recordCount) public returns (uint) {
 
-        // Record exists for the given Lat/Lon
-        if (recordByLatLon[_latlon] != 0){
+        // Record exists for the given Lat/Lon AND virus
+        if (recordByLatLon[_latlon] != 0 && keccak256(abi.encodePacked(records[recordByLatLon[_latlon]].virus)) == keccak256(abi.encodePacked(_virus))){
             // Increment existing record's count by _recordCount
             records[recordByLatLon[_latlon]].count = records[recordByLatLon[_latlon]].count.add(_recordCount);  // Update patient count on preexisting record
             return recordByLatLon[_latlon];

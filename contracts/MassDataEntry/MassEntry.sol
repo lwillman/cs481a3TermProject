@@ -1,6 +1,6 @@
 pragma solidity >=0.5.0 <0.6.0;
 
-import "./Storage.sol";
+import "../Storage.sol";
 
 /*
     Note: this entire contract is embarassing
@@ -23,8 +23,12 @@ contract massEntry {
     Storage storageContract;
     address storageContractAddress; // You probably want to initialize this here rather than calling _setStorageContract for every deployment...
 
-    constructor() public{
+    /*constructor() public{
         storageContract = Storage(storageContractAddress);
+    }*/
+
+    constructor (address storageAddr) public {
+        _setStorageContract(storageAddr);
     }
 
     function _setStorageContract(address _newStorageContractAddress) public {

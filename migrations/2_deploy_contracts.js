@@ -51,8 +51,8 @@ module.exports = async function(deployer){
     for (var i = 0; i < dataSubset.length; i++){
         console.log("Submitting data subset " + i);
         await dataSubset[i].enter();
-    }*/
+    }
 
     await deployer.deploy(Patient, storageContractAddress);
-    await Patient.deployed();
+    await Patient.deployed(); */
 }

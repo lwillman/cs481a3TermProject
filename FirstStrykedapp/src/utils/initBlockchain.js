@@ -1,4 +1,4 @@
-import PatientDataContract from "../contract_ABI/PatientData.json";
+import PatientDataContract from "../contract_ABI_oldsymlink/PatientData.json";
 import store from "../redux/store";
 
 //Code pulled from CryptoZombies and modified

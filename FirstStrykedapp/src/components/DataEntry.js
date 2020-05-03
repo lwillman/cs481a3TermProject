@@ -137,6 +137,7 @@ class DataEntry extends Component {
 
         return (
             <div className="DataEntry">
+                <style>{'body { background-color: #282c34'}</style>
                 <Card className="Card">
                     <TextInput name="name"
                                placeholder={this.state.formControls.name.placeholder}

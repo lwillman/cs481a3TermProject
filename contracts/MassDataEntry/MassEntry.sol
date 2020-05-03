@@ -1,6 +1,6 @@
 pragma solidity >=0.5.0 <0.6.0;
 
-import "./Storage.sol";
+import "../Storage.sol";
 
 /*
     Note: this entire contract is embarassing
@@ -11,7 +11,7 @@ import "./Storage.sol";
         1) You must update storageContractAddress by calling _setStorageContract if necessary
         2) You will need to copy/paste functions f1-f9 individually such that you are deploying only one of these functions at a time
         Otherwise you will exceed contract length and transaction limitations.
-        3) The contract at 0x704446b9Cc003259EB3B0A080c3356970d3B218c has historical data through 4/28.
+        3) The contract at 0x7AF30bdddBD23EFbe533d27e89c4b8c6eC5D149B has historical data through 4/28.
         PLEASE DO NOT ADD TO IT UNLESS ADDING NEW DAYS. Otherwise we will need to deploy 9 versions of this contract to rebuild the dataset on chain.
     
     Data Source: Johns Hopkins School of Public Health
@@ -19,22 +19,26 @@ import "./Storage.sol";
 */
 
 contract massEntry {
-    uint rand = 0;
+
     Storage storageContract;
-    
-    // You probably want to initialize this here once the final storage contract is deployed (so you don't have to manually update by calling _setStorageContract each deployment...)
-    address storageContractAddress;
-    
-    constructor() public{
+    address storageContractAddress; // You probably want to initialize this here rather than calling _setStorageContract for every deployment...
+
+    /*constructor() public{
         storageContract = Storage(storageContractAddress);
+    }*/
+
+    constructor (address storageAddr) public {
+        _setStorageContract(storageAddr);
     }
-    
+
     function _setStorageContract(address _newStorageContractAddress) public {
         storageContractAddress = _newStorageContractAddress;
         storageContract = Storage(storageContractAddress);
     }
-    
+
     function f1() public {
+        require(storageContractAddress != address(0), "You have to set the storage contract address first.");
+
         storageContract.addHistoricalRecord("COVID-19","Afghanistan","33,65",1531);
         storageContract.addHistoricalRecord("COVID-19","Albania","41.1533,20.1683",726);
         storageContract.addHistoricalRecord("COVID-19","Algeria","28.0339,1.6596",3382);
@@ -64,8 +68,10 @@ contract massEntry {
         storageContract.addHistoricalRecord("COVID-19","Bolivia","-16.2902,-63.5887",950);
         storageContract.addHistoricalRecord("COVID-19","Bosnia and Herzegovina","43.9159,17.6791",1516);
     }
-    
+
     function f2() public {
+        require(storageContractAddress != address(0), "You have to set the storage contract address first.");
+
         storageContract.addHistoricalRecord("COVID-19","Brazil","-14.235,-51.9253",63100);
         storageContract.addHistoricalRecord("COVID-19","Brunei","4.5353,114.7277",138);
         storageContract.addHistoricalRecord("COVID-19","Bulgaria","42.7339,25.4858",1300);
@@ -98,8 +104,10 @@ contract massEntry {
         storageContract.addHistoricalRecord("COVID-19","China","19.1959,109.7453",168);
         storageContract.addHistoricalRecord("COVID-19","China","39.549,116.1306",328);
     }
-    
+
     function f3() public {
+        require(storageContractAddress != address(0), "You have to set the storage contract address first.");
+
         storageContract.addHistoricalRecord("COVID-19","China","47.862,127.7615",936);
         storageContract.addHistoricalRecord("COVID-19","China","33.882,113.614",1276);
         storageContract.addHistoricalRecord("COVID-19","China","22.3,114.2",1037);
@@ -132,8 +140,10 @@ contract massEntry {
         storageContract.addHistoricalRecord("COVID-19","Diamond Princess","0,0",712);
         storageContract.addHistoricalRecord("COVID-19","Cuba","22,-80",1369);
     }
-    
+
     function f4() public {
+        require(storageContractAddress != address(0), "You have to set the storage contract address first.");
+
         storageContract.addHistoricalRecord("COVID-19","Cyprus","35.1264,33.4299",817);
         storageContract.addHistoricalRecord("COVID-19","Czechia","49.8175,15.473",7404);
         storageContract.addHistoricalRecord("COVID-19","Denmark","61.8926,-6.9118",187);
@@ -166,8 +176,10 @@ contract massEntry {
         storageContract.addHistoricalRecord("COVID-19","Georgia","42.3154,43.3569",486);
         storageContract.addHistoricalRecord("COVID-19","Germany","51,9",157770);
     }
-    
+
     function f5() public {
+        require(storageContractAddress != address(0), "You have to set the storage contract address first.");
+
         storageContract.addHistoricalRecord("COVID-19","Ghana","7.9465,-1.0232",1550);
         storageContract.addHistoricalRecord("COVID-19","Greece","39.0742,21.8243",2517);
         storageContract.addHistoricalRecord("COVID-19","Guatemala","15.7835,-90.2308",500);
@@ -200,8 +212,10 @@ contract massEntry {
         storageContract.addHistoricalRecord("COVID-19","Lithuania","55.1694,23.8813",1438);
         storageContract.addHistoricalRecord("COVID-19","Luxembourg","49.8153,6.1296",3723);
     }
-    
+
     function f6() public {
+        require(storageContractAddress != address(0), "You have to set the storage contract address first.");
+
         storageContract.addHistoricalRecord("COVID-19","Madagascar","-18.7669,46.8691",124);
         storageContract.addHistoricalRecord("COVID-19","Malaysia","2.5,112.5",5780);
         storageContract.addHistoricalRecord("COVID-19","Maldives","3.2028,73.2207",214);
@@ -234,8 +248,10 @@ contract massEntry {
         storageContract.addHistoricalRecord("COVID-19","Peru","-9.19,-75.0152",27517);
         storageContract.addHistoricalRecord("COVID-19","Philippines","13,122",7579);
     }
-    
+
     function f7() public {
+        require(storageContractAddress != address(0), "You have to set the storage contract address first.");
+
         storageContract.addHistoricalRecord("COVID-19","Poland","51.9194,19.1451",11617);
         storageContract.addHistoricalRecord("COVID-19","Portugal","39.3999,-8.2245",23864);
         storageContract.addHistoricalRecord("COVID-19","Qatar","25.3548,51.1839",10287);
@@ -268,8 +284,10 @@ contract massEntry {
         storageContract.addHistoricalRecord("COVID-19","Tunisia","34,9",949);
         storageContract.addHistoricalRecord("COVID-19","Turkey","38.9637,35.2433",110130);
     }
-    
+
     function f8() public {
+        require(storageContractAddress != address(0), "You have to set the storage contract address first.");
+
         storageContract.addHistoricalRecord("COVID-19","Uganda","1,32",79);
         storageContract.addHistoricalRecord("COVID-19","Ukraine","48.3794,31.1656",8617);
         storageContract.addHistoricalRecord("COVID-19","United Arab Emirates","24,54",10349);
@@ -302,8 +320,10 @@ contract massEntry {
         storageContract.addHistoricalRecord("COVID-19","Mali","17.570692,-3.996166",389);
         storageContract.addHistoricalRecord("COVID-19","Saint Kitts and Nevis","17.357822,-62.782998",15);
     }
-    
+
     function f9() public {
+        require(storageContractAddress != address(0), "You have to set the storage contract address first.");
+
         storageContract.addHistoricalRecord("COVID-19","Canada","64.8255,-124.8457",5);
         storageContract.addHistoricalRecord("COVID-19","Canada","64.2823,-135",11);
         storageContract.addHistoricalRecord("COVID-19","Kosovo","42.602636,20.902977",510);

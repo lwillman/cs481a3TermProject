@@ -12,6 +12,7 @@ import NavigationBar from "./components/TopBar";
 import Home from "./components/home";
 import DataEntry from "./components/DataEntry";
 import store from "./redux/store";
+import getRecords from "./utils/getRecords";
 
 
 class App extends Component {
@@ -22,7 +23,7 @@ class App extends Component {
     try {
       const web3 = await getWeb3();
       const data = await initBlockchain(web3);
-      await getPatientCount(data.FS, "COVID-19");
+      await getRecords(data.FS);
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -40,9 +41,6 @@ class App extends Component {
           <Container>
             <NavigationBar state={this.state} />
             <div>
-
-              <Route exact path="/home" component={Home} />
-              <Route exact path="/DataEntry" component={DataEntry} />
 
             </div>
           </Container>

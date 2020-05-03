@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
+import HeatMap from "./map";
 //import Dashboard from './pages/Dashboard';
 import Home from './home';
 import AboutUs from './DataEntry';
@@ -18,6 +19,7 @@ class NavigationBar extends React.Component {
                                 <div className="collapse navbar-collapse" id="collapsibleNavbar">
                                     <ul className="nav navbar-nav">
                                         <NavLink className="nav-link" exact to="/" >Home</NavLink>
+                                        <NavLink className="nav-link" exact to="/Map" >Map</NavLink>
                                         <NavLink className="nav-link" exact to="/data_entry" >Data Entry</NavLink>
 
                                     </ul>
@@ -27,6 +29,7 @@ class NavigationBar extends React.Component {
                         <div className="content">
                             <Switch>
                                 <Route path="/" component={Home} exact />
+                                <Route path="/map" component={HeatMap} exact />
                                 <Route path="/data_entry" component={AboutUs} exact />
                             </Switch>
                         </div>

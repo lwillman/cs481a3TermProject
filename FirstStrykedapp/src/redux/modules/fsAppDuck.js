@@ -16,6 +16,7 @@
 const WEB3_INITIALIZED = "WEB3_INITIALIZED";
 const BLOCKCHAIN_INITIALIZED = "BLOCKCHAIN_INITIALIZED";
 const VIRUS_INFO = "VIRUS_INFO";
+const RECORDS = "RECORDS";
 
 //  Actions and Action Creator Functions
 //
@@ -87,6 +88,11 @@ export default function reducer(state = initialState, action) {
             return Object.assign({}, state, {
                 FS: action.payload.FS,
                 patients: action.payload.patients
+            });
+
+        case RECORDS:
+            return Object.assign({}, state, {
+                parsedRecords: action.payload.parsedRecords
             });
 
         default:

@@ -4,7 +4,7 @@ import HeatMap from "./map";
 class Home extends React.Component {
     render() {
         return(
-            <HeatMap />
+            <div></div>
         );
     }
 }

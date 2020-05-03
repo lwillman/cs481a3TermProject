@@ -18,7 +18,7 @@ class HeatMap extends Component {
         positions: [{lat: 0, lng: 0, weight: 1}, {lat: 10, lng: 0, weight: 10}],
         options: {
             radius: 20,
-            opacity: 0.6
+            opacity: 0.7
         }
     }
 

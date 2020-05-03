@@ -16,15 +16,18 @@ async function getRecords(FS) {
     let parsedRecords = {
         positions: [],
         options: {
-            radius: 30,
-            opacity: 0.6
+            radius: 20,
+            opacity: 0.7
         }
     }
 
     for(let i = 1; i < recordData.length; i++){
         let [lat, lng] = recordData[i].latLon.split(',');
-        let count = recordData[i].count;
-        parsedRecords.positions.push({lat: parseFloat(lat), lng: parseFloat(lng), weight: parseFloat(count)});
+        let count = parseFloat(recordData[i].count);
+        lat = parseFloat(lat);
+        lng = parseFloat(lng);
+        if(!(isNaN(lat) || isNaN(lng) || isNaN(count)))
+            parsedRecords.positions.push({lat: lat, lng: lng, weight: count});
     }
     // put state data into the REDUX store for easy access from other pages and components
 

@@ -12,20 +12,16 @@ var entries = [
     artifacts.require("./MassDataEntry/entry9.sol")
 ];
 
-var deployAndPopulateNewStorageContract = true;
+let storageContractAddress = "0x3A4f9c081a386af6A5E4fd555c12dD0C8D5a7409";
 
 module.exports = async function(deployer){
-    let storageContractAddress = "0x7AF30bdddBD23EFbe533d27e89c4b8c6eC5D149B";
+    // Uncomment this block to deploy and populate a new storage contract
 
-    /*await deployer.deploy(Patient, storageContractAddress);
-    await Patient.deployed();*/
-
-    // New contract and populate from here on
     await deployer.deploy(Storage);
     let storageInstance = await Storage.deployed();
     storageContractAddress = storageInstance.address;
-    console.log("STorage: " + storageContractAddress);
-
+    console.log("Storage address: " + storageContractAddress);
+    /*
     await Promise.all([
         deployer.deploy(entries[0], storageContractAddress),
         deployer.deploy(entries[1], storageContractAddress),
@@ -38,6 +34,7 @@ module.exports = async function(deployer){
         deployer.deploy(entries[8], storageContractAddress)
     ]);
 
+    console.log("Deploy block cleared, now waiting for confirmation...");
     dataSubset = await Promise.all([
         entries[0].deployed(),
         entries[1].deployed(),
@@ -49,8 +46,13 @@ module.exports = async function(deployer){
         entries[7].deployed(),
         entries[8].deployed()
     ]);
-    
+
+    console.log("Deploy confirmation received.");
     for (var i = 0; i < dataSubset.length; i++){
-        dataSubset[i].enter();
-    }
+        console.log("Submitting data subset " + i);
+        await dataSubset[i].enter();
+    }*/
+
+    await deployer.deploy(Patient, storageContractAddress);
+    await Patient.deployed();
 }
